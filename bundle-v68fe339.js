@@ -406,6 +406,8 @@ var app = (function () {
     var mdiBorderVertical = "M15,13H17V11H15M15,21H17V19H15M15,5H17V3H15M19,9H21V7H19M19,5H21V3H19M19,13H21V11H19M19,21H21V19H19M11,21H13V3H11M19,17H21V15H19M7,5H9V3H7M3,17H5V15H3M3,21H5V19H3M3,13H5V11H3M7,13H9V11H7M7,21H9V19H7M3,5H5V3H3M3,9H5V7H3V9Z";
     var mdiFullscreen = "M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z";
     var mdiFullscreenExit = "M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z";
+    var mdiPause = "M14,19H18V5H14M6,19H10V5H6V19Z";
+    var mdiPlayPause = "M3,5V19L11,12M13,19H16V5H13M18,5V19H21V5";
     var mdiRecord = "M19,12C19,15.86 15.86,19 12,19C8.14,19 5,15.86 5,12C5,8.14 8.14,5 12,5C15.86,5 19,8.14 19,12Z";
     var mdiStop = "M18,18H6V6H18V18Z";
 
@@ -5347,17 +5349,17 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[32] = list[i];
+    	child_ctx[34] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[35] = list[i];
+    	child_ctx[37] = list[i];
     	return child_ctx;
     }
 
-    // (365:10) {:else}
+    // (381:10) {:else}
     function create_else_block_5(ctx) {
     	let a;
     	let t_value = (/*errorMessage*/ ctx[8] || "Not connected") + "";
@@ -5369,7 +5371,7 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "class", "button is-danger");
     			attr_dev(a, "disabled", "");
-    			add_location(a, file$2, 365, 12, 11674);
+    			add_location(a, file$2, 381, 12, 12174);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5389,14 +5391,14 @@ var app = (function () {
     		block,
     		id: create_else_block_5.name,
     		type: "else",
-    		source: "(365:10) {:else}",
+    		source: "(381:10) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:10) {#if connected}
+    // (318:10) {#if connected}
     function create_if_block_6(ctx) {
     	let a0;
     	let t0;
@@ -5478,21 +5480,21 @@ var app = (function () {
     			create_component(icon1.$$.fragment);
     			attr_dev(a0, "class", "button is-info is-light");
     			attr_dev(a0, "disabled", "");
-    			add_location(a0, file$2, 310, 12, 9431);
+    			add_location(a0, file$2, 318, 12, 9619);
     			attr_dev(a1, "class", "button is-danger is-light");
-    			add_location(a1, file$2, 353, 12, 11070);
+    			add_location(a1, file$2, 369, 12, 11570);
     			attr_dev(span0, "class", "icon");
-    			add_location(span0, file$2, 355, 14, 11283);
+    			add_location(span0, file$2, 371, 14, 11783);
     			attr_dev(a2, "class", "button is-link");
     			attr_dev(a2, "title", "Toggle Studio Mode");
     			toggle_class(a2, "is-light", !/*isStudioMode*/ ctx[5]);
-    			add_location(a2, file$2, 354, 12, 11156);
+    			add_location(a2, file$2, 370, 12, 11656);
     			attr_dev(span1, "class", "icon");
-    			add_location(span1, file$2, 360, 14, 11529);
+    			add_location(span1, file$2, 376, 14, 12029);
     			attr_dev(a3, "class", "button is-link");
     			attr_dev(a3, "title", "Show Scene on Top");
     			toggle_class(a3, "is-light", !/*isSceneOnTop*/ ctx[6]);
-    			add_location(a3, file$2, 359, 12, 11404);
+    			add_location(a3, file$2, 375, 12, 11904);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a0, anchor);
@@ -5515,7 +5517,7 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(a1, "click", /*disconnect*/ ctx[21], false, false, false),
+    					listen_dev(a1, "click", /*disconnect*/ ctx[22], false, false, false),
     					listen_dev(a2, "click", /*toggleStudioMode*/ ctx[11], false, false, false),
     					listen_dev(a3, "click", /*switchSceneView*/ ctx[12], false, false, false)
     				];
@@ -5635,14 +5637,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(310:10) {#if connected}",
+    		source: "(318:10) {#if connected}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:14) {:else}
+    // (322:14) {:else}
     function create_else_block_4(ctx) {
     	let t;
 
@@ -5663,14 +5665,14 @@ var app = (function () {
     		block,
     		id: create_else_block_4.name,
     		type: "else",
-    		source: "(314:14) {:else}",
+    		source: "(322:14) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (312:14) {#if heartbeat}
+    // (320:14) {#if heartbeat}
     function create_if_block_9(ctx) {
     	let t0_value = Math.round(/*heartbeat*/ ctx[1].stats.fps) + "";
     	let t0;
@@ -5718,14 +5720,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(312:14) {#if heartbeat}",
+    		source: "(320:14) {#if heartbeat}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:12) {:else}
+    // (333:12) {:else}
     function create_else_block_3(ctx) {
     	let a;
     	let span0;
@@ -5750,10 +5752,10 @@ var app = (function () {
     			span1 = element("span");
     			span1.textContent = "Start stream";
     			attr_dev(span0, "class", "icon");
-    			add_location(span0, file$2, 326, 16, 10182);
-    			add_location(span1, file$2, 329, 16, 10291);
+    			add_location(span0, file$2, 334, 16, 10370);
+    			add_location(span1, file$2, 337, 16, 10479);
     			attr_dev(a, "class", "button is-danger");
-    			add_location(a, file$2, 325, 14, 10114);
+    			add_location(a, file$2, 333, 14, 10302);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5790,14 +5792,14 @@ var app = (function () {
     		block,
     		id: create_else_block_3.name,
     		type: "else",
-    		source: "(325:12) {:else}",
+    		source: "(333:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:12) {#if heartbeat && heartbeat.streaming}
+    // (324:12) {#if heartbeat && heartbeat.streaming}
     function create_if_block_8(ctx) {
     	let a;
     	let span0;
@@ -5828,10 +5830,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text(" secs)");
     			attr_dev(span0, "class", "icon");
-    			add_location(span0, file$2, 317, 16, 9853);
-    			add_location(span1, file$2, 320, 16, 9965);
+    			add_location(span0, file$2, 325, 16, 10041);
+    			add_location(span1, file$2, 328, 16, 10153);
     			attr_dev(a, "class", "button is-danger");
-    			add_location(a, file$2, 316, 14, 9786);
+    			add_location(a, file$2, 324, 14, 9974);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5873,71 +5875,120 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(316:12) {#if heartbeat && heartbeat.streaming}",
+    		source: "(324:12) {#if heartbeat && heartbeat.streaming}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (344:14) {:else}
+    // (352:14) {:else}
     function create_else_block_2(ctx) {
-    	let a;
+    	let a0;
     	let span0;
-    	let icon;
+    	let icon0;
     	let t0;
     	let span1;
+    	let t1;
+    	let t2_value = /*heartbeat*/ ctx[1].totalRecordTime + "";
+    	let t2;
+    	let t3;
+    	let t4;
+    	let a1;
+    	let span2;
+    	let icon1;
+    	let t5;
+    	let span3;
     	let current;
     	let mounted;
     	let dispose;
 
-    	icon = new Index({
-    			props: { path: mdiRecord },
+    	icon0 = new Index({
+    			props: { path: mdiPause },
+    			$$inline: true
+    		});
+
+    	icon1 = new Index({
+    			props: { path: mdiPlayPause },
     			$$inline: true
     		});
 
     	const block = {
     		c: function create() {
-    			a = element("a");
+    			a0 = element("a");
     			span0 = element("span");
-    			create_component(icon.$$.fragment);
+    			create_component(icon0.$$.fragment);
     			t0 = space();
     			span1 = element("span");
-    			span1.textContent = "Start recording";
+    			t1 = text("Pause recording (");
+    			t2 = text(t2_value);
+    			t3 = text(" secs)");
+    			t4 = space();
+    			a1 = element("a");
+    			span2 = element("span");
+    			create_component(icon1.$$.fragment);
+    			t5 = space();
+    			span3 = element("span");
+    			span3.textContent = "Resume recording";
     			attr_dev(span0, "class", "icon");
-    			add_location(span0, file$2, 345, 16, 10852);
-    			add_location(span1, file$2, 348, 16, 10956);
-    			attr_dev(a, "class", "button is-danger");
-    			add_location(a, file$2, 344, 14, 10781);
+    			add_location(span0, file$2, 353, 16, 11040);
+    			add_location(span1, file$2, 356, 16, 11143);
+    			attr_dev(a0, "class", "button is-danger");
+    			add_location(a0, file$2, 352, 14, 10969);
+    			attr_dev(span2, "class", "icon");
+    			add_location(span2, file$2, 361, 16, 11348);
+    			add_location(span3, file$2, 364, 16, 11455);
+    			attr_dev(a1, "class", "button is-danger");
+    			add_location(a1, file$2, 360, 14, 11276);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, a, anchor);
-    			append_dev(a, span0);
-    			mount_component(icon, span0, null);
-    			append_dev(a, t0);
-    			append_dev(a, span1);
+    			insert_dev(target, a0, anchor);
+    			append_dev(a0, span0);
+    			mount_component(icon0, span0, null);
+    			append_dev(a0, t0);
+    			append_dev(a0, span1);
+    			append_dev(span1, t1);
+    			append_dev(span1, t2);
+    			append_dev(span1, t3);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, a1, anchor);
+    			append_dev(a1, span2);
+    			mount_component(icon1, span2, null);
+    			append_dev(a1, t5);
+    			append_dev(a1, span3);
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(a, "click", /*startRecording*/ ctx[18], false, false, false);
+    				dispose = [
+    					listen_dev(a0, "click", /*pauseRecording*/ ctx[19], false, false, false),
+    					listen_dev(a1, "click", /*resumeRecording*/ ctx[20], false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if ((!current || dirty[0] & /*heartbeat*/ 2) && t2_value !== (t2_value = /*heartbeat*/ ctx[1].totalRecordTime + "")) set_data_dev(t2, t2_value);
+    		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(icon.$$.fragment, local);
+    			transition_in(icon0.$$.fragment, local);
+    			transition_in(icon1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(icon.$$.fragment, local);
+    			transition_out(icon0.$$.fragment, local);
+    			transition_out(icon1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(a);
-    			destroy_component(icon);
+    			if (detaching) detach_dev(a0);
+    			destroy_component(icon0);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(a1);
+    			destroy_component(icon1);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -5945,14 +5996,14 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(344:14) {:else}",
+    		source: "(352:14) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:12) {#if heartbeat && heartbeat.recording}
+    // (343:12) {#if heartbeat && heartbeat.recording}
     function create_if_block_7(ctx) {
     	let a;
     	let span0;
@@ -5979,10 +6030,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = text(" secs)");
     			attr_dev(span0, "class", "icon");
-    			add_location(span0, file$2, 336, 16, 10525);
-    			add_location(span1, file$2, 339, 16, 10627);
+    			add_location(span0, file$2, 344, 16, 10713);
+    			add_location(span1, file$2, 347, 16, 10815);
     			attr_dev(a, "class", "button is-danger");
-    			add_location(a, file$2, 335, 14, 10455);
+    			add_location(a, file$2, 343, 14, 10643);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5996,7 +6047,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(a, "click", /*stopRecording*/ ctx[19], false, false, false);
+    				dispose = listen_dev(a, "click", /*stopRecording*/ ctx[18], false, false, false);
     				mounted = true;
     			}
     		},
@@ -6024,14 +6075,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(335:12) {#if heartbeat && heartbeat.recording}",
+    		source: "(343:12) {#if heartbeat && heartbeat.recording}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (411:4) {:else}
+    // (427:4) {:else}
     function create_else_block_1$1(ctx) {
     	let h1;
     	let t0;
@@ -6087,31 +6138,31 @@ var app = (function () {
     			a1 = element("a");
     			a1.textContent = "obs-websocket plugin";
     			t14 = text("\n        is installed and enabled.");
-    			add_location(strong, file$2, 413, 8, 13516);
+    			add_location(strong, file$2, 429, 8, 14016);
     			attr_dev(a0, "href", "https://obsproject.com/");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$2, 415, 8, 13586);
+    			add_location(a0, file$2, 431, 8, 14086);
     			attr_dev(h1, "class", "subtitle");
-    			add_location(h1, file$2, 411, 6, 13467);
-    			add_location(p0, file$2, 437, 6, 14488);
+    			add_location(h1, file$2, 427, 6, 13967);
+    			add_location(p0, file$2, 453, 6, 14988);
     			attr_dev(input, "id", "host");
     			attr_dev(input, "class", "input");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "localhost:4444");
-    			add_location(input, file$2, 441, 10, 14646);
+    			add_location(input, file$2, 457, 10, 15146);
     			attr_dev(p1, "class", "control is-expanded");
-    			add_location(p1, file$2, 440, 8, 14604);
+    			add_location(p1, file$2, 456, 8, 15104);
     			attr_dev(button, "class", "button is-success");
-    			add_location(button, file$2, 444, 10, 14809);
+    			add_location(button, file$2, 460, 10, 15309);
     			attr_dev(p2, "class", "control");
-    			add_location(p2, file$2, 443, 8, 14779);
+    			add_location(p2, file$2, 459, 8, 15279);
     			attr_dev(div, "class", "field is-grouped");
-    			add_location(div, file$2, 439, 6, 14565);
+    			add_location(div, file$2, 455, 6, 15065);
     			attr_dev(a1, "href", "https://github.com/Palakis/obs-websocket/releases");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$2, 450, 8, 14964);
+    			add_location(a1, file$2, 466, 8, 15464);
     			attr_dev(p3, "class", "help");
-    			add_location(p3, file$2, 448, 6, 14912);
+    			add_location(p3, file$2, 464, 6, 15412);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -6140,9 +6191,9 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "keyup", /*hostkey*/ ctx[22], false, false, false),
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[23]),
-    					listen_dev(button, "click", /*connect*/ ctx[20], false, false, false)
+    					listen_dev(input, "keyup", /*hostkey*/ ctx[23], false, false, false),
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[24]),
+    					listen_dev(button, "click", /*connect*/ ctx[21], false, false, false)
     				];
 
     				mounted = true;
@@ -6176,14 +6227,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1$1.name,
     		type: "else",
-    		source: "(411:4) {:else}",
+    		source: "(427:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (382:4) {#if connected}
+    // (398:4) {#if connected}
     function create_if_block$2(ctx) {
     	let t0;
     	let t1;
@@ -6322,14 +6373,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(382:4) {#if connected}",
+    		source: "(398:4) {#if connected}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (420:6) {#if document.location.protocol === 'https:'}
+    // (436:6) {#if document.location.protocol === 'https:'}
     function create_if_block_5(ctx) {
     	let div;
     	let t0;
@@ -6362,20 +6413,20 @@ var app = (function () {
     			a2 = element("a");
     			t7 = text("please click here to load the non-secure version of this page");
     			t8 = text("\n          .");
-    			add_location(strong0, file$2, 422, 10, 13884);
+    			add_location(strong0, file$2, 438, 10, 14384);
     			attr_dev(a0, "href", "https://ngrok.com/");
-    			add_location(a0, file$2, 424, 10, 13996);
+    			add_location(a0, file$2, 440, 10, 14496);
     			attr_dev(a1, "href", "https://pagekite.net/");
-    			add_location(a1, file$2, 426, 10, 14058);
+    			add_location(a1, file$2, 442, 10, 14558);
 
     			attr_dev(a2, "href", a2_href_value = "http://" + document.location.hostname + (document.location.port
     			? ":" + document.location.port
     			: "") + document.location.pathname);
 
-    			add_location(a2, file$2, 429, 12, 14194);
-    			add_location(strong1, file$2, 428, 10, 14173);
+    			add_location(a2, file$2, 445, 12, 14694);
+    			add_location(strong1, file$2, 444, 10, 14673);
     			attr_dev(div, "class", "notification is-danger");
-    			add_location(div, file$2, 420, 8, 13735);
+    			add_location(div, file$2, 436, 8, 14235);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6401,14 +6452,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(420:6) {#if document.location.protocol === 'https:'}",
+    		source: "(436:6) {#if document.location.protocol === 'https:'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (383:6) {#if isSceneOnTop}
+    // (399:6) {#if isSceneOnTop}
     function create_if_block_4(ctx) {
     	let sceneview;
     	let current;
@@ -6452,18 +6503,18 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(383:6) {#if isSceneOnTop}",
+    		source: "(399:6) {#if isSceneOnTop}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (399:14) {:else}
+    // (415:14) {:else}
     function create_else_block$1(ctx) {
     	let a;
     	let p;
-    	let t_value = /*sc*/ ctx[35].name + "";
+    	let t_value = /*sc*/ ctx[37].name + "";
     	let t;
     	let mounted;
     	let dispose;
@@ -6474,9 +6525,9 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "title has-text-centered is-size-6-mobile");
-    			add_location(p, file$2, 400, 18, 13155);
+    			add_location(p, file$2, 416, 18, 13655);
     			attr_dev(a, "class", "tile is-child is-info notification");
-    			add_location(a, file$2, 399, 16, 13042);
+    			add_location(a, file$2, 415, 16, 13542);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -6504,7 +6555,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*sceneChunks*/ 512 && t_value !== (t_value = /*sc*/ ctx[35].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*sceneChunks*/ 512 && t_value !== (t_value = /*sc*/ ctx[37].name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(a);
@@ -6517,18 +6568,18 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(399:14) {:else}",
+    		source: "(415:14) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (395:55) 
+    // (411:55) 
     function create_if_block_3(ctx) {
     	let a;
     	let p;
-    	let t_value = /*sc*/ ctx[35].name + "";
+    	let t_value = /*sc*/ ctx[37].name + "";
     	let t;
     	let mounted;
     	let dispose;
@@ -6539,9 +6590,9 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "title has-text-centered is-size-6-mobile");
-    			add_location(p, file$2, 396, 18, 12917);
+    			add_location(p, file$2, 412, 18, 13417);
     			attr_dev(a, "class", "tile is-child is-warning notification");
-    			add_location(a, file$2, 395, 16, 12829);
+    			add_location(a, file$2, 411, 16, 13329);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -6554,7 +6605,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*sceneChunks*/ 512 && t_value !== (t_value = /*sc*/ ctx[35].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*sceneChunks*/ 512 && t_value !== (t_value = /*sc*/ ctx[37].name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(a);
@@ -6567,18 +6618,18 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(395:55) ",
+    		source: "(411:55) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (391:14) {#if currentScene == sc.name}
+    // (407:14) {#if currentScene == sc.name}
     function create_if_block_2$1(ctx) {
     	let a;
     	let p;
-    	let t_value = /*sc*/ ctx[35].name + "";
+    	let t_value = /*sc*/ ctx[37].name + "";
     	let t;
 
     	const block = {
@@ -6587,9 +6638,9 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "title has-text-centered is-size-6-mobile");
-    			add_location(p, file$2, 392, 18, 12670);
+    			add_location(p, file$2, 408, 18, 13170);
     			attr_dev(a, "class", "tile is-child is-primary notification");
-    			add_location(a, file$2, 391, 16, 12602);
+    			add_location(a, file$2, 407, 16, 13102);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -6597,7 +6648,7 @@ var app = (function () {
     			append_dev(p, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*sceneChunks*/ 512 && t_value !== (t_value = /*sc*/ ctx[35].name + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*sceneChunks*/ 512 && t_value !== (t_value = /*sc*/ ctx[37].name + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(a);
@@ -6608,20 +6659,20 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(391:14) {#if currentScene == sc.name}",
+    		source: "(407:14) {#if currentScene == sc.name}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:10) {#each chunk as sc}
+    // (404:10) {#each chunk as sc}
     function create_each_block_1(ctx) {
     	let div;
 
     	function select_block_type_5(ctx, dirty) {
-    		if (/*currentScene*/ ctx[2] == /*sc*/ ctx[35].name) return create_if_block_2$1;
-    		if (/*currentPreviewScene*/ ctx[3] == /*sc*/ ctx[35].name) return create_if_block_3;
+    		if (/*currentScene*/ ctx[2] == /*sc*/ ctx[37].name) return create_if_block_2$1;
+    		if (/*currentPreviewScene*/ ctx[3] == /*sc*/ ctx[37].name) return create_if_block_3;
     		return create_else_block$1;
     	}
 
@@ -6633,7 +6684,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "tile is-parent");
-    			add_location(div, file$2, 388, 12, 12453);
+    			add_location(div, file$2, 404, 12, 12953);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6662,17 +6713,17 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(388:10) {#each chunk as sc}",
+    		source: "(404:10) {#each chunk as sc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (386:6) {#each sceneChunks as chunk}
+    // (402:6) {#each sceneChunks as chunk}
     function create_each_block(ctx) {
     	let div;
-    	let each_value_1 = /*chunk*/ ctx[32];
+    	let each_value_1 = /*chunk*/ ctx[34];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -6689,7 +6740,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "tile is-ancestor");
-    			add_location(div, file$2, 386, 8, 12380);
+    			add_location(div, file$2, 402, 8, 12880);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6700,7 +6751,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*sceneChunks, currentScene, setScene, currentPreviewScene, isStudioMode, setPreview*/ 41516) {
-    				each_value_1 = /*chunk*/ ctx[32];
+    				each_value_1 = /*chunk*/ ctx[34];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -6733,14 +6784,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(386:6) {#each sceneChunks as chunk}",
+    		source: "(402:6) {#each sceneChunks as chunk}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (408:6) {#if !isSceneOnTop}
+    // (424:6) {#if !isSceneOnTop}
     function create_if_block_1$1(ctx) {
     	let sceneview;
     	let current;
@@ -6784,7 +6835,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(408:6) {#if !isSceneOnTop}",
+    		source: "(424:6) {#if !isSceneOnTop}",
     		ctx
     	});
 
@@ -6912,57 +6963,57 @@ var app = (function () {
     			if (img.src !== (img_src_value = "favicon.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "OBS-web");
     			attr_dev(img, "class", "rotate");
-    			add_location(img, file$2, 292, 6, 8835);
+    			add_location(img, file$2, 300, 6, 9023);
     			attr_dev(a0, "class", "navbar-item is-size-4 has-text-weight-bold");
     			attr_dev(a0, "href", "/");
-    			add_location(a0, file$2, 291, 4, 8765);
+    			add_location(a0, file$2, 299, 4, 8953);
     			attr_dev(span0, "aria-hidden", "true");
-    			add_location(span0, file$2, 298, 6, 9090);
+    			add_location(span0, file$2, 306, 6, 9278);
     			attr_dev(span1, "aria-hidden", "true");
-    			add_location(span1, file$2, 299, 6, 9124);
+    			add_location(span1, file$2, 307, 6, 9312);
     			attr_dev(span2, "aria-hidden", "true");
-    			add_location(span2, file$2, 300, 6, 9158);
+    			add_location(span2, file$2, 308, 6, 9346);
     			attr_dev(a1, "role", "button");
     			attr_dev(a1, "class", "navbar-burger burger");
     			attr_dev(a1, "aria-label", "menu");
     			attr_dev(a1, "aria-expanded", "false");
     			attr_dev(a1, "data-target", "navmenu");
-    			add_location(a1, file$2, 297, 4, 8975);
+    			add_location(a1, file$2, 305, 4, 9163);
     			attr_dev(div0, "class", "navbar-brand");
-    			add_location(div0, file$2, 290, 2, 8734);
+    			add_location(div0, file$2, 298, 2, 8922);
     			attr_dev(span3, "class", "icon");
-    			add_location(span3, file$2, 369, 12, 11955);
+    			add_location(span3, file$2, 385, 12, 12455);
     			attr_dev(a2, "class", "button is-link");
     			attr_dev(a2, "title", "Toggle Fullscreen");
     			toggle_class(a2, "is-light", !/*isFullScreen*/ ctx[4]);
-    			add_location(a2, file$2, 368, 10, 11831);
+    			add_location(a2, file$2, 384, 10, 12331);
     			attr_dev(div1, "class", "buttons");
-    			add_location(div1, file$2, 307, 8, 9315);
+    			add_location(div1, file$2, 315, 8, 9503);
     			attr_dev(div2, "class", "navbar-item");
-    			add_location(div2, file$2, 306, 6, 9281);
+    			add_location(div2, file$2, 314, 6, 9469);
     			attr_dev(div3, "class", "navbar-end");
-    			add_location(div3, file$2, 305, 4, 9250);
+    			add_location(div3, file$2, 313, 4, 9438);
     			attr_dev(div4, "id", "navmenu");
     			attr_dev(div4, "class", "navbar-menu");
-    			add_location(div4, file$2, 304, 2, 9207);
+    			add_location(div4, file$2, 312, 2, 9395);
     			attr_dev(nav, "class", "navbar is-primary");
     			attr_dev(nav, "role", "navigation");
     			attr_dev(nav, "aria-label", "main navigation");
-    			add_location(nav, file$2, 289, 0, 8653);
+    			add_location(nav, file$2, 297, 0, 8841);
     			attr_dev(div5, "class", "container");
-    			add_location(div5, file$2, 380, 2, 12173);
+    			add_location(div5, file$2, 396, 2, 12673);
     			attr_dev(section, "class", "section");
-    			add_location(section, file$2, 379, 0, 12145);
-    			add_location(strong, file$2, 461, 6, 15222);
+    			add_location(section, file$2, 395, 0, 12645);
+    			add_location(strong, file$2, 477, 6, 15722);
     			attr_dev(a3, "href", "https://niekvandermaas.nl/");
-    			add_location(a3, file$2, 463, 6, 15262);
+    			add_location(a3, file$2, 479, 6, 15762);
     			attr_dev(a4, "href", "https://github.com/Niek/obs-web");
-    			add_location(a4, file$2, 465, 6, 15345);
-    			add_location(p, file$2, 460, 4, 15212);
+    			add_location(a4, file$2, 481, 6, 15845);
+    			add_location(p, file$2, 476, 4, 15712);
     			attr_dev(div6, "class", "content has-text-centered");
-    			add_location(div6, file$2, 459, 2, 15168);
+    			add_location(div6, file$2, 475, 2, 15668);
     			attr_dev(footer, "class", "footer");
-    			add_location(footer, file$2, 458, 0, 15142);
+    			add_location(footer, file$2, 474, 0, 15642);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7257,11 +7308,19 @@ var app = (function () {
     		await sendCommand("StopRecording");
     	}
 
+    	async function pauseRecording() {
+    		await sendCommand("PauseRecording");
+    	}
+
+    	async function resumeRecording() {
+    		await sendCommand("ResumeRecording");
+    	}
+
     	async function updateScenes() {
     		let data = await sendCommand("GetSceneList");
     		$$invalidate(2, currentScene = data.currentScene);
 
-    		$$invalidate(25, scenes = data.scenes.filter(i => {
+    		$$invalidate(26, scenes = data.scenes.filter(i => {
     			return i.name.indexOf("(hidden)") === -1;
     		})); // Skip hidden scenes
 
@@ -7435,6 +7494,8 @@ var app = (function () {
     		mdiAccessPointOff,
     		mdiRecord,
     		mdiStop,
+    		mdiPause,
+    		mdiPlayPause,
     		Icon: Index,
     		compareVersions,
     		OBSWebSocket: lib,
@@ -7463,6 +7524,8 @@ var app = (function () {
     		stopStream,
     		startRecording,
     		stopRecording,
+    		pauseRecording,
+    		resumeRecording,
     		updateScenes,
     		getStudioMode,
     		getScreenshot,
@@ -7481,7 +7544,7 @@ var app = (function () {
     		if ("isStudioMode" in $$props) $$invalidate(5, isStudioMode = $$props.isStudioMode);
     		if ("isSceneOnTop" in $$props) $$invalidate(6, isSceneOnTop = $$props.isSceneOnTop);
     		if ("wakeLock" in $$props) wakeLock = $$props.wakeLock;
-    		if ("scenes" in $$props) $$invalidate(25, scenes = $$props.scenes);
+    		if ("scenes" in $$props) $$invalidate(26, scenes = $$props.scenes);
     		if ("host" in $$props) $$invalidate(7, host = $$props.host);
     		if ("password" in $$props) password = $$props.password;
     		if ("errorMessage" in $$props) $$invalidate(8, errorMessage = $$props.errorMessage);
@@ -7495,7 +7558,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*scenes*/ 33554432) {
+    		if ($$self.$$.dirty[0] & /*scenes*/ 67108864) {
     			 $$invalidate(9, sceneChunks = Array(Math.ceil(scenes.length / 4)).fill().map((_, index) => index * 4).map(begin => scenes.slice(begin, begin + 4)));
     		}
     	};
@@ -7519,8 +7582,9 @@ var app = (function () {
     		setPreview,
     		startStream,
     		stopStream,
-    		startRecording,
     		stopRecording,
+    		pauseRecording,
+    		resumeRecording,
     		connect,
     		disconnect,
     		hostkey,
@@ -7549,4 +7613,4 @@ var app = (function () {
     return app;
 
 }());
-//# sourceMappingURL=bundle-v17a127a.js.map
+//# sourceMappingURL=bundle-v68fe339.js.map
